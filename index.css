@@ -1,0 +1,127 @@
+body
+{
+    height: 100%;
+}
+
+div
+{
+    -moz-column-count: 5;
+    -moz-column-width: 250px;
+    -moz-column-rule: 1px solid #000;
+    -webkit-column-count: 5;
+    -webkit-column-rule: 1px solid #000;
+    column-count: 5;
+    column-width: 200px;
+    column-rule: 1px solid #000;
+
+    background: url(images/bg.jpg);
+    text-align: center;
+    border: 2px inset #000;
+}
+
+h1
+{
+    -webkit-column-span: all;
+    -moz-column-span: all;
+    column-span: all;
+    margin: 5px;
+    text-align: center;
+    font: 60px bold 'Lora',serif;
+}
+
+h1::before
+{
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    background-image: url('images/decore.png');
+    background-size: 100% 100px;
+    content:"";
+}
+
+h1::after
+{
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    background-image: url('images/decore2.png');
+    background-size: 100% 100px;
+    content:"";
+}
+
+h2
+{
+    -webkit-column-span: all;
+    -moz-column-span: all;
+    column-span: all;
+    text-align: center;
+    font: 30px italic 'Lora', serif;
+}
+
+h3
+{
+    text-align: center;
+    font: 20px 'Lora',serif;
+}
+
+figure
+{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+img
+{
+    text-align: center;
+    width: 70%;
+}
+
+figcaption
+{
+    font: 15px 'Droid Sans',sans-serif;
+    width: 95%;
+    text-align: justify;
+    padding: 2%;
+}
+
+p
+{
+    text-align: justify;
+    padding-right: 10px;
+    padding-left: 15px;
+    text-indent: -10px;
+    font: 20px 'Droid Sans',sans-serif;
+    hyphens: auto;
+}
+
+ol p
+{
+    padding-left: 5px;
+}
+
+p::first-letter
+{
+    font-family: 'Trade Winds', cursive;
+    font-size: 25px;
+}
+
+.nowrap
+{
+    white-space: nowrap;
+    font-style: italic;
+}
+
+blockquote
+{
+    -webkit-column-span: all;
+    -moz-column-span: all;
+    column-span: all;
+    font-size: 40px;
+    font-variant: small-caps;
+}
+
+blockquote span
+{
+    font-size: 15px;
+}
