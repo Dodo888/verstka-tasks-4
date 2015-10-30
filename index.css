@@ -1,6 +1,12 @@
+@font-face {
+    font-family: Minecraft;
+    src: url(Minecraft_rus.ttf);
+}
+
 body
 {
-    height: 100%;
+    background: url(images/bg.jpg);
+    text-align: center;
 }
 
 div
@@ -13,10 +19,6 @@ div
     column-count: 5;
     column-width: 200px;
     column-rule: 1px solid #000;
-
-    background: url(images/bg.jpg);
-    text-align: center;
-    border: 2px inset #000;
 }
 
 h1
@@ -29,24 +31,22 @@ h1
     font: 60px bold 'Lora',serif;
 }
 
-h1::before
-{
-    display: inline-block;
-    width: 30%;
-    height: 100px;
-    background-image: url('images/decore.png');
-    background-size: 100% 100px;
-    content:"";
-}
-
+h1::before,
 h1::after
 {
     display: inline-block;
     width: 30%;
     height: 100px;
-    background-image: url('images/decore2.png');
     background-size: 100% 100px;
     content:"";
+}
+h1::before
+{
+    background-image: url('images/decore.png');
+}
+h1::after
+{
+    background-image: url('images/decore2.png');
 }
 
 h2
@@ -121,7 +121,82 @@ blockquote
     font-variant: small-caps;
 }
 
-blockquote span
+.author
 {
     font-size: 15px;
+    font-family: Minecraft, sans-serif;
+}
+
+.fontSize[value="20"] ~ main p
+{
+    font-size: 20px;
+}
+
+.fontSize[value="22"] ~ main p
+{
+    font-size: 22px;
+}
+
+.fontSize[value="24"] ~ main p
+{
+    font-size: 24px;
+}
+
+.fontFamily[value="sansSerif"] ~ main p
+{
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.fontFamily[value="serif"] ~ main p
+{
+    font-family: 'Lora',serif;
+}
+
+.fontFamily[value="cursive"] ~ main p
+{
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.fontFamily[value="fantasy"] ~ main p
+{
+    font-family: 'Minecraft', fantasy;
+}
+
+.fontFamily[value="monospace"] ~ main p
+{
+    font-family: 'Courier New', monospace;
+}
+
+.pageStyle[value="night"] ~ header,
+.pageStyle[value="simple"] ~ main
+{
+    background: none;
+}
+
+.pageStyle[value="night"] ~ header,
+.pageStyle[value="night"] ~ main
+{
+    background: url(images/nightbg.jpg);
+}
+
+.pageStyle[value="simple"] ~ main p,
+.pageStyle[value="simple"] ~ header h1,
+.pageStyle[value="simple"] ~ main h2,
+.pageStyle[value="simple"] ~ main figcaption,
+.pageStyle[value="simple"] ~ main h3,
+.pageStyle[value="simple"] ~ main span,
+.pageStyle[value="simple"] ~ main blockquote
+{
+    color: #000;
+}
+
+.pageStyle[value="night"] ~ main p,
+.pageStyle[value="night"] ~ header h1,
+.pageStyle[value="night"] ~ main h2,
+.pageStyle[value="night"] ~ main figcaption,
+.pageStyle[value="night"] ~ main h3,
+.pageStyle[value="night"] ~ main span,
+.pageStyle[value="simple"] ~ main blockquote
+{
+    color: #fff;
 }
